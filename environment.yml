@@ -1,0 +1,10 @@
+name: blu_gtav
+dependencies:
+  - python=3.5.6  
+  - numpy=1.18.*
+  - pip:
+    - win32gui
+    - win32core
+    - utils
+    - pyautogui
+    - pywin32
