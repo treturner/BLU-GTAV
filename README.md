@@ -7,10 +7,10 @@ The world of AI is growing at an exponential rate in the real world, but what ab
 I wanted to research and develop my skills in reinforcement/machine/deep learning with neural nets. **Why** Grand Theft Auto V? Well GTA has a dynamic open world, with active AI and NPC simulations. This will create a great environment for Blu to learn and explore different implementations of deep learning and AI development. Also the use of mods in GTA allow me to control certain variables like time of day, weather, ect.
 
 ## Getting Started
-If you use **Anaconda** environments, you can create this projects environment with:
+If you use **Anaconda** environments, you can create this projects environment with the code below. The --name tag allows you to specify the desired name for the environment:
 
 ```
-conda env create -f environment.yml
+conda env create --name insert_env_name -f environment.yml
 ```
 
 This will create a conda environment called 'blu-gtav' with python **3.5.2** and all the required packages.
