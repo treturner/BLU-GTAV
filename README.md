@@ -26,25 +26,18 @@ conda env create -n environment_name -f environment.yml
 
 #### Without using Anaconda
 Set your python version to 3.5.6, install the latest version of [pip](https://pip.pypa.io/en/stable/installing/) and run the following command to install all of the required packages.
-```
-pip install opencv-python
-```
-```
-pip install pywin32
-```
-```
-pip install pandas
-```
-```
-pip install scikit-learn
-```
-```
-pip install keras
-```
-```
-pip install tensorflow
-``` 
-***tensorflow-gpu** or **tensorflow-cpu** can be substituted based on specific computer specifications.
+
+`pip install opencv-python`
+
+`pip install pywin32`
+
+`pip install pandas`
+
+`pip install scikit-learn`
+
+`pip install keras`
+
+`pip install tensorflow` ***tensorflow-gpu** or **tensorflow-cpu** can be substituted based on specific computer specifications.
 
 ### Setting up the screen input
 Make sure you have GTA V downloaded and set to a **800 x 600** resolution. Put the games window in the top-left corner of your screen as this is where grab_screen will record pixel from.
