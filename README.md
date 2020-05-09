@@ -10,7 +10,7 @@ I wanted to research and develop my skills in reinforcement/machine/deep learnin
 Project requirements include:
 * **[Python](https://www.python.org/downloads/release/python-356/)** - version 3.5.6
 * **[Anaconda](https://www.anaconda.com/products/individual)** - *recomended, but not required*
-* **[GTA V](https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/)** - You can reference the wiki page [GTA V Alternative](https://github.com/westpoint-neural-networks/final-project-treturner/wiki) for an alternate way to test a 'person punching' model if a playable version of GTA V is unavailable. 
+* **[GTA V](https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/)** - You can reference the wiki page [GTA V Alternative](https://github.com/westpoint-neural-networks/final-project-treturner/wiki/GTA-V-Alternative) for an alternate way to test a 'person punching' model if a playable version of GTA V is unavailable. 
 
 ### Initial Setup
 #### Using Anaconda
@@ -26,25 +26,18 @@ conda env create -n environment_name -f environment.yml
 
 #### Without using Anaconda
 Set your python version to 3.5.6, install the latest version of [pip](https://pip.pypa.io/en/stable/installing/) and run the following command to install all of the required packages.
-```
-pip install opencv-python
-```
-```
-pip install pywin32
-```
-```
-pip install pandas
-```
-```
-pip install scikit-learn
-```
-```
-pip install keras
-```
-```
-pip install tensorflow
-``` 
-***tensorflow-gpu** or **tensorflow-cpu** can be substituted based on specific computer specifications.
+
+`pip install opencv-python`
+
+`pip install pywin32`
+
+`pip install pandas`
+
+`pip install scikit-learn`
+
+`pip install keras`
+
+`pip install tensorflow` ***tensorflow-gpu** or **tensorflow-cpu** can be substituted based on specific computer specifications.
 
 ### Setting up the screen input
 Make sure you have GTA V downloaded and set to a **800 x 600** resolution. Put the games window in the top-left corner of your screen as this is where grab_screen will record pixel from.
@@ -56,11 +49,11 @@ Simply execute the following python files in chronological order to prepare, tra
 * `python 3_train_model.py` - the weights of trained models can be found in '/saved_models'
 * `python 4_test_model.py` - loads the 'proportionate' model by default
 
-Running `python training_data/show_data.py` will display the training data saved at '/training_data/training_data.npy.' 
+> Running `python training_data/show_data.py` will display the training data saved at '/training_data/training_data.npy.' 
 
-Running `python training_data/show_balanced_data.py` will display the balanced training data saved at '/training_data/training_data_balanced.npy.' 
+> Running `python training_data/show_balanced_data.py` will display the balanced training data saved at '/training_data/training_data_balanced.npy.' 
 
-Additional documentation for each of these files can be found on this projects [wik](https://github.com/westpoint-neural-networks/final-project-treturner/wiki) pages.
+Additional documentation for each of these files can be found on this projects [wiki](https://github.com/westpoint-neural-networks/final-project-treturner/wiki) pages.
 
 ## Authors
 * **Trevaun Turner** - *Initial work* - [treturner](https://github.com/treturner/)
