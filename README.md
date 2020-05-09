@@ -10,7 +10,7 @@ I wanted to research and develop my skills in reinforcement/machine/deep learnin
 Project requirements include:
 * **[Python](https://www.python.org/downloads/release/python-356/)** - version 3.5.6
 * **[Anaconda](https://www.anaconda.com/products/individual)** - *recomended, but not required*
-* **[GTA V](https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/)** - You can reference the wiki page [GTA V Alternative](https://github.com/westpoint-neural-networks/final-project-treturner/wiki) for an alternate way to test a 'person punching' model if a playable version of GTA V is unavailable. 
+* **[GTA V](https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/)** - You can reference the wiki page [GTA V Alternative](https://github.com/westpoint-neural-networks/final-project-treturner/wiki/GTA-V-Alternative) for an alternate way to test a 'person punching' model if a playable version of GTA V is unavailable. 
 
 ### Initial Setup
 #### Using Anaconda
@@ -60,7 +60,7 @@ Running `python training_data/show_data.py` will display the training data saved
 
 Running `python training_data/show_balanced_data.py` will display the balanced training data saved at '/training_data/training_data_balanced.npy.' 
 
-Additional documentation for each of these files can be found on this projects [wik](https://github.com/westpoint-neural-networks/final-project-treturner/wiki) pages.
+Additional documentation for each of these files can be found on this projects [wiki](https://github.com/westpoint-neural-networks/final-project-treturner/wiki) pages.
 
 ## Authors
 * **Trevaun Turner** - *Initial work* - [treturner](https://github.com/treturner/)
