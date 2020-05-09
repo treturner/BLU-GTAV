@@ -56,9 +56,9 @@ Simply execute the following python files in chronological order to prepare, tra
 * `python 3_train_model.py` - the weights of trained models can be found in '/saved_models'
 * `python 4_test_model.py` - loads the 'proportionate' model by default
 
-Running `python training_data/show_data.py` will display the training data saved at '/training_data/training_data.npy.' 
+> Running `python training_data/show_data.py` will display the training data saved at '/training_data/training_data.npy.' 
 
-Running `python training_data/show_balanced_data.py` will display the balanced training data saved at '/training_data/training_data_balanced.npy.' 
+> Running `python training_data/show_balanced_data.py` will display the balanced training data saved at '/training_data/training_data_balanced.npy.' 
 
 Additional documentation for each of these files can be found on this projects [wiki](https://github.com/westpoint-neural-networks/final-project-treturner/wiki) pages.
 
