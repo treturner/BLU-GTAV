@@ -4,37 +4,72 @@ The world of AI is growing at an exponential rate in the real world, but what ab
 
 ## Motivation
 
-I wanted to research and develop my skills in reinforcement/machine/deep learning with neural nets. **Why** Grand Theft Auto V? Well GTA has a dynamic open world, with active AI and NPC simulations. This will create a great environment for Blu to learn and explore different implementations of deep learning and AI development. Also the use of mods in GTA allow me to control certain variables like time of day, weather, ect.
+I wanted to research and develop my skills in reinforcement/machine/deep learning with neural nets. **Why** Grand Theft Auto V? Well GTA has a dynamic open world, with active AI and NPC simulations. This will create a great environment for Blu to learn and explore different implementations of deep learning and AI development. 
 
-## Getting Started
-If you use **Anaconda** environments, you can create this projects environment with the code below. The --name tag allows you to specify the desired name for the environment:
+## Getting Started 
+Project requirements include:
+* **[Python](https://www.python.org/downloads/release/python-356/)** - version 3.5.6
+* **[Anaconda](https://www.anaconda.com/products/individual)** - *recomended, but not required*
+* **[GTA V](https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/)** - You can reference the wiki page [GTA V Alternative](https://github.com/westpoint-neural-networks/final-project-treturner/wiki) for an alternate way to test a 'person punching' model if a playable version of GTA V is unavailable. 
 
+### Initial Setup
+#### Using Anaconda
+By using **Anaconda** environments, you can create this project's environment with the code below.
 ```
-conda env create --name insert_env_name -f environment.yml
+conda env create -f environment.yml
 ```
 
-This will create a conda environment called 'blu-gtav' with python **3.5.2** and all the required packages.
+This will create a conda environment called **'blu_gtav'** with python **3.5.6** and all the required packages. The **-n** or **--name** tag allows one to specify a specific name for the env other than **'blu_gtav.'**
+```
+conda env create -n environment_name -f environment.yml
+```
+
+#### Without using Anaconda
+Set your python version to 3.5.6, install the latest version of [pip](https://pip.pypa.io/en/stable/installing/) and run the following command to install all of the required packages.
+```
+pip install opencv-python
+```
+```
+pip install pywin32
+```
+```
+pip install pandas
+```
+```
+pip install scikit-learn
+```
+```
+pip install keras
+```
+```
+pip install tensorflow
+``` 
+***tensorflow-gpu** or **tensorflow-cpu** can be substituted based on specific computer specifications.
 
 ### Setting up the screen input
-Make sure you have GTA V downloaded and set to a **800 x 600** resolution. Put the games window in the top-left corner of your screen as this is where grabscreen is set to.
+Make sure you have GTA V downloaded and set to a **800 x 600** resolution. Put the games window in the top-left corner of your screen as this is where grab_screen will record pixel from.
 
-## Dependencies without Anaconda
-Set your python version to 3.5.2 and install these packages manually.
+### Procedure
+Simply execute the following python files in chronological order to prepare, train, and test a model that aims to punch people in GTA V:
+* `python 1_collect_data.py` - a sample of training data is provided in '/training_data'
+* `python 2_balance_data.py` - a sample of balanced training data is provided in '/training_data'
+* `python 3_train_model.py` - the weights of trained models can be found in '/saved_models'
+* `python 4_test_model.py` - loads the 'proportionate' model by default
 
-### Use pip to install these whl
-* [OpenCV](http://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv) - download the version 'cp35' with your desired architecture.
-* [pypiwin32](https://pypi.python.org/pypi/pypiwin32/219) - download the version 'cp35' with your desired architecture.
+Running `python training_data/show_data.py` will display the training data saved at '/training_data/training_data.npy.' 
 
-### pip/conda install
-* numpy
-* time
+Running `python training_data/show_balanced_data.py` will display the balanced training data saved at '/training_data/training_data_balanced.npy.' 
+
+Additional documentation for each of these files can be found on this projects [wik](https://github.com/westpoint-neural-networks/final-project-treturner/wiki) pages.
 
 ## Authors
-* **Trevaun Turner** - *Initial work* - [treturner](https://bitbucket.com/treturner/)
+* **Trevaun Turner** - *Initial work* - [treturner](https://github.com/treturner/)
 
 ## Contributors
-* **Frannecklp** - for creating and optimizing *grabscreen.py* and it's functions.
-* **Jake** - created *getkeys.py* for reading game input through the console while on the game window - [Box-Of-Hats](https://github.com/Box-Of-Hats)
+* **Frannecklp** - for creating and optimizing *grab_screen.py* and it's functions.
+* **Jake** - created *get_keys.py* for reading game input through the console while on the game window - [Box-Of-Hats](https://github.com/Box-Of-Hats)
 
 ## Acknowledgments
-* Harrison - creator of [pythonprogramming.net](https://pythonprogramming.net) for inspiration and discovering that this was even remotely possible.
+* **Harrison** - creator of [pythonprogramming.net](https://pythonprogramming.net) for inspiration and discovering that this was even remotely possible.
+* **Dr. Kyle King** - my CS485 *Applied Neural Networks* instructor who influenced for my development and growth in deep learning/neural networks.
+
