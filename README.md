@@ -58,7 +58,7 @@ Set your python version to 3.5.6, install the latest version of [pip](https://pi
 ### Setting up the screen input
 Make sure you have GTA V downloaded and set to a **800 x 600** resolution. Put the games window in the top-left corner of your screen as this is where grab_screen will record pixel from.
 
-### Procedure
+### Usage
 Simply execute the following python files in chronological order to prepare, train, and test a model that aims to punch people in GTA V:
 * `python 1_collect_data.py` - a sample of training data is provided in '/training_data'
 * `python 2_balance_data.py` - a sample of balanced training data is provided in '/training_data'
