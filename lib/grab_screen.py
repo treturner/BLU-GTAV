@@ -1,7 +1,3 @@
-# Done by Frannecklp
-# Screen cast using pywin32
-# Citation: Box Of Hats (https://github.com/Box-Of-Hats )
-
 import cv2
 import numpy as np
 import win32gui, win32ui, win32con, win32api

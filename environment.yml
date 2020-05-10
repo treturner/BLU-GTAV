@@ -8,7 +8,7 @@ dependencies:
   - vs2015_runtime=14.16.27012=hf0eaf9b_1
   - wheel=0.31.1=py35_0
   - wincertstore=0.2=py35hfebbdb8_0
-  - pip==20.1
+  - pip
   - pip:
     - absl-py==0.9.0
     - astor==0.8.1
