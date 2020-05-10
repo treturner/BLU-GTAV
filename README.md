@@ -25,7 +25,7 @@ Project requirements include:
 * **[GTA V](https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/)** - You can reference the wiki page [GTA V Alternative](https://github.com/westpoint-neural-networks/final-project-treturner/wiki/GTA-V-Alternative) for an alternate way to test a 'person punching' model if a playable version of GTA V is unavailable. 
 
 
-### Initial Setup
+## Initial Setup
 
 > **Using Anaconda**
 
@@ -55,10 +55,10 @@ Set your python version to 3.5.6, install the latest version of [pip](https://pi
 
 `pip install tensorflow` ***tensorflow-gpu** or **tensorflow-cpu** can be substituted based on specific computer specifications.
 
-### Setting up the screen input
+## Setting up the screen input
 Make sure you have GTA V downloaded and set to a **800 x 600** resolution. Put the games window in the top-left corner of your screen as this is where grab_screen will record pixel from.
 
-### Usage
+## Usage
 Simply execute the following python files in chronological order to prepare, train, and test a model that aims to punch people in GTA V:
 * `python 1_collect_data.py` - a sample of training data is provided in '/training_data'
 * `python 2_balance_data.py` - a sample of balanced training data is provided in '/training_data'
