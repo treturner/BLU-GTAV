@@ -91,52 +91,38 @@ def forw_punch():
   PressKey(SHIFT)
 
 def main():
-    for i in list(range(5))[::-1]:
-        print(i+1)
-        time.sleep(1)
+  for i in list(range(5))[::-1]:
+    print(i+1)
+    time.sleep(1)
 
-    paused = False
+  while True:
+    screen = grab_screen(region=(0,40,1000,800))
+    screen = cv2.cvtColor(screen, cv2.COLOR_BGR2GRAY)
+    screen = cv2.resize(screen, (80, 60))
 
-    while True:
-        if not paused:
-            screen = grab_screen(region=(0,40,1000,800))
-            screen = cv2.cvtColor(screen, cv2.COLOR_BGR2GRAY)
-            screen = cv2.resize(screen, (80, 60))
+    prediction = model.predict([screen.reshape(-1,WIDTH,HEIGHT,1)])[0]
+    print(prediction)
+    moves = list(np.around(prediction))
 
-            prediction = model.predict([screen.reshape(-1,WIDTH,HEIGHT,1)])[0]
-            print(prediction)
-            moves = list(np.around(prediction))
-
-            if moves == [1,0,0,0,0,0,0,0,0,0,0]:
-              forw()
-            elif moves == [0,1,0,0,0,0,0,0,0,0,0]:
-              back()
-            elif moves == [0,0,1,0,0,0,0,0,0,0,0]:
-              left()
-            elif moves == [0,0,0,1,0,0,0,0,0,0,0]:
-              right()
-            elif moves == [0,0,0,0,1,0,0,0,0,0,0]:
-              forw_left()
-            elif moves == [0,0,0,0,0,1,0,0,0,0,0]:
-              forw_right()
-            elif moves == [0,0,0,0,0,0,1,0,0,0,0]:
-              back_left()
-            elif moves == [0,0,0,0,0,0,0,1,0,0,0]:
-              back_right()
-            elif moves == [0,0,0,0,0,0,0,0,1,0,0]:
-              punch()
-            elif moves == [0,0,0,0,0,0,0,0,0,1,0]:
-              forw_punch()
-
-            keys = key_check()
-            if 'T' in keys:
-              if paused:
-                  paused = False
-                  print('Unpausing...')
-                  time.sleep(1)
-              else:
-                  print('Pausing...')
-                  paused = True
-                  time.sleep(1)
+    if moves == [1,0,0,0,0,0,0,0,0,0,0]:
+      forw()
+    elif moves == [0,1,0,0,0,0,0,0,0,0,0]:
+      back()
+    elif moves == [0,0,1,0,0,0,0,0,0,0,0]:
+      left()
+    elif moves == [0,0,0,1,0,0,0,0,0,0,0]:
+      right()
+    elif moves == [0,0,0,0,1,0,0,0,0,0,0]:
+      forw_left()
+    elif moves == [0,0,0,0,0,1,0,0,0,0,0]:
+      forw_right()
+    elif moves == [0,0,0,0,0,0,1,0,0,0,0]:
+      back_left()
+    elif moves == [0,0,0,0,0,0,0,1,0,0,0]:
+      back_right()
+    elif moves == [0,0,0,0,0,0,0,0,1,0,0]:
+      punch()
+    elif moves == [0,0,0,0,0,0,0,0,0,1,0]:
+      forw_punch()
 
 main()

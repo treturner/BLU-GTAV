@@ -17,25 +17,25 @@ fwdPunches = []
 nothing = []
 
 for data in train_data:
-    img = data[0]
-    choice = data[1]
+  img = data[0]
+  choice = data[1]
 
-    if choice == [0,0,1,0,0,0,0,0,0,0,0]:
-        lefts.append([img,choice])
-    elif choice == [1,0,0,0,0,0,0,0,0,0,0]:
-        forwards.append([img,choice])
-    elif choice == [0,0,0,1,0,0,0,0,0,0,0]:
-        rights.append([img,choice])
-    elif choice == [0,0,0,0,0,1,0,0,0,0,0]:
-        fwdRight.append([img,choice])
-    elif choice == [0,0,0,0,1,0,0,0,0,0,0]:
-        fwdLeft.append([img,choice])
-    elif choice == [0,0,0,0,0,0,0,0,1,0,0]:
-        punches.append([img,choice])
-    elif choice == [0,0,0,0,0,0,0,0,0,1,0]:
-        fwdPunches.append([img,choice])
-    elif choice == [0,0,0,0,0,0,0,0,0,0,1]:
-        nothing.append([img,choice])
+  if choice == [0,0,1,0,0,0,0,0,0,0,0]:
+    lefts.append([img,choice])
+  elif choice == [1,0,0,0,0,0,0,0,0,0,0]:
+    forwards.append([img,choice])
+  elif choice == [0,0,0,1,0,0,0,0,0,0,0]:
+    rights.append([img,choice])
+  elif choice == [0,0,0,0,0,1,0,0,0,0,0]:
+    fwdRight.append([img,choice])
+  elif choice == [0,0,0,0,1,0,0,0,0,0,0]:
+    fwdLeft.append([img,choice])
+  elif choice == [0,0,0,0,0,0,0,0,1,0,0]:
+    punches.append([img,choice])
+  elif choice == [0,0,0,0,0,0,0,0,0,1,0]:
+    fwdPunches.append([img,choice])
+  elif choice == [0,0,0,0,0,0,0,0,0,0,1]:
+    nothing.append([img,choice])
 
 shuffle(forwards)
 shuffle(lefts)
