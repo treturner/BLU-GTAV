@@ -1,6 +1,5 @@
 import numpy as np
 import pandas as pd
-from collections import Counter
 from random import shuffle
 
 np_load_old = np.load
@@ -38,6 +37,15 @@ for data in train_data:
     elif choice == [0,0,0,0,0,0,0,0,0,0,1]:
         nothing.append([img,choice])
 
+shuffle(forwards)
+shuffle(lefts)
+shuffle(rights)
+shuffle(fwdLeft)
+shuffle(fwdRight)
+shuffle(punches)
+shuffle(fwdPunches)
+shuffle(nothing)
+
 forwards = forwards[:len(fwdLeft)][:len(fwdRight)]
 lefts = lefts[:len(forwards)]
 rights = rights[:len(forwards)]
@@ -52,7 +60,3 @@ shuffle(final_data)
 print("Data balanced.")
 
 np.save('training_data/training_data_balanced.npy', final_data)
-
-
-
-

@@ -27,6 +27,11 @@ y = np.array([i[1] for i in train_data])
 
 x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.25)
 
+x_train = x_train.astype('float32')
+x_test = x_test.astype('float32')
+x_train /= 255
+x_test /= 255
+
 model = Sequential()
 model.add(Conv2D(32, (3, 3), padding='same', input_shape=x_train.shape[1:], activation='relu'))
 model.add(Conv2D(32, (3, 3), activation='relu'))
@@ -44,11 +49,6 @@ opt = keras.optimizers.RMSprop(learning_rate=LR, decay=1e-6)
 model.compile(loss='categorical_crossentropy',
               optimizer=opt,
               metrics=['accuracy'])
-
-x_train = x_train.astype('float32')
-x_test = x_test.astype('float32')
-x_train /= 255
-x_test /= 255
 
 model.fit(x_train, y_train,
           batch_size=BATCH_SIZE,
