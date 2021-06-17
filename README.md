@@ -75,10 +75,10 @@ Additional documentation for each of these files can be found on this projects [
 * **Trevaun Turner** - *Initial work* - [treturner](https://github.com/treturner/)
 
 ## Contributors
-* **Frannecklp** - for creating and optimizing *grab_screen.py* and it's functions.
-* **Jake** - created *get_keys.py* for reading game input through the console while on the game window - [Box-Of-Hats](https://github.com/Box-Of-Hats)
+* **Frannecklp** - For creating and optimizing *grab_screen.py* and it's functions.
+* **Jake** - Created *get_keys.py* for reading game input through the console while on the game window - [Box-Of-Hats](https://github.com/Box-Of-Hats)
 
 ## Acknowledgments
-* **Harrison** - creator of [pythonprogramming.net](https://pythonprogramming.net) for inspiration and discovering that this was even remotely possible.
-* **Dr. Kyle King** - my CS485 *Applied Neural Networks* instructor who influenced for my development and growth in deep learning/neural networks.
+* **Harrison** - Creator of [pythonprogramming.net](https://pythonprogramming.net) for inspiration and discovering that this was even remotely possible.
+* **Dr. Kyle King** - My CS485 *Applied Neural Networks* instructor who influenced my development and growth in deep learning/neural networks.
 
